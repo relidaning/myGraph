@@ -7,14 +7,15 @@ import org.springframework.web.bind.annotation.RestController;
 import xyz.lidaning.common.JsonResult;
 import xyz.lidaning.graphweb.ms.MsUtils;
 
+import java.io.IOException;
+
 @Slf4j
 @RestController
 @RequestMapping("/onenote")
 public class OnenoteController {
 
     @GetMapping("/notes")
-    public JsonResult notes(){
-        log.info("[x] notes: "+ MsUtils.getToken());
-        return JsonResult.success();
+    public JsonResult notes() throws IOException {
+        return JsonResult.success("sucess", MsUtils.myProfile());
     }
 }
