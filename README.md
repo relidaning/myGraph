@@ -6,16 +6,16 @@ then get them from graph rest api, remind me at a specified time
 ## graphtutorial
 official java demo
 ### function
-[v] done
+- [x] done
 
 ## graph-web
 a graph-rest-api java-web demo.
 To be continued...
 ### function
-[v] get token
-[v] list users
-[x] my notes
-[x] get specified doc
+- [x] get token
+- [x] list users
+- [] my notes
+- [] get specified doc
 
 ### question
 1. What are the types of grant?
