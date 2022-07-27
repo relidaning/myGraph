@@ -16,6 +16,6 @@ public class OnenoteController {
 
     @GetMapping("/notes")
     public JsonResult notes() throws IOException {
-        return JsonResult.success("sucess", MsUtils.myProfile());
+        return JsonResult.success("sucess", MsUtils.users());
     }
 }

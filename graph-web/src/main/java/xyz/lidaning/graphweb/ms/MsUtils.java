@@ -66,6 +66,19 @@ public class MsUtils {
         return _token;
     }
 
+    public static String users() throws IOException {
+        if(_token==null)
+            getToken();
+        Request request = new Request.Builder()
+                .url("https://graph.microsoft.com/v1.0/users")
+                .method("GET", null)
+                .addHeader("Authorization", "Bearer "+_token)
+                .build();
+        Response response = client.newCall(request).execute();
+        String result = response.body().string();
+        return result;
+    }
+
     public static String myProfile() throws IOException {
         if(_token==null)
             getToken();
@@ -79,6 +92,8 @@ public class MsUtils {
         String result = response.body().string();
         return result;
     }
+
+
 
 
 
